@@ -29,15 +29,16 @@ public class ViewPagerAdapter extends FragmentStatePagerAdapter {
     @Override
     public Fragment getItem(int position) {
 
-        if(position == 0) // if the position is 0 we are returning the First tab
-        {
-            return null;
+        if(position == 0) {
+            HealthDataTab healthDataTab = new HealthDataTab();
+            return healthDataTab;
         }
         else  if(position == 1)  {
-
-            return null;
+            HealthDataTab healthDataTab = new HealthDataTab();
+            return healthDataTab;
         } else  {
-            return null;
+            HealthDataTab healthDataTab = new HealthDataTab();
+            return healthDataTab;
         }
 
 
