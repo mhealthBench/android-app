@@ -135,10 +135,10 @@ public class ProfileSettingsActivity extends AppCompatPreferenceActivity {
         ActionBar actionBar = getSupportActionBar();
         if (actionBar != null) {
             // Show the Up button in the action bar.
-            actionBar.setDisplayHomeAsUpEnabled(true);
+            actionBar.setDisplayHomeAsUpEnabled(false);
             actionBar.setBackgroundDrawable(new ColorDrawable(Color.parseColor("#FFC107")));
-            
         }
+
     }
 
     /**
