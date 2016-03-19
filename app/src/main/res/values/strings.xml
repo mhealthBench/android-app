@@ -73,9 +73,7 @@
     <string name="pref_header_senses">Senses</string>
 
     <string name="pref_title_new_message_notifications">New message notifications</string>
+    
+    <string name="pref_title_senses_bluetooth_settings">Senses Bluetooth Settings</string>
 
-    <string name="pref_title_ringtone">Ringtone</string>
-    <string name="pref_ringtone_silent">Silent</string>
-
-    <string name="pref_title_vibrate">Vibrate</string>
 </resources>
