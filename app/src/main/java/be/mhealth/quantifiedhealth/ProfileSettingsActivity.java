@@ -181,13 +181,10 @@ public class ProfileSettingsActivity extends AppCompatPreferenceActivity {
             // to their values. When their values change, their summaries are
             // updated to reflect the new value, per the Android Design
             // guidelines.
-           // bindPreferenceSummaryToValue(findPreference("example_text"));
 
             bindPreferenceSummaryToValue(findPreference("name"));
             bindPreferenceSummaryToValue(findPreference("height"));
             bindPreferenceSummaryToValue(findPreference("weight"));
-
-           // bindPreferenceSummaryToValue(findPreference("example_list"));
         }
 
         @Override
