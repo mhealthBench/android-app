@@ -10,21 +10,6 @@
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:showIn="@layout/activity_main" tools:context=".MainActivity">
 
-<<<<<<< HEAD
-    <TextView android:text="Hello World!" android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/textView" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Profile Settings"
-        android:id="@+id/btnProfileSettings"
-        android:layout_below="@+id/textView"
-        android:layout_alignParentEnd="true"
-        android:onClick="showProfileSettings" />
-=======
-
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:orientation="vertical"
         android:layout_width="match_parent"
@@ -86,5 +71,4 @@
             android:gravity="center"
             android:textSize="18sp"/>
     </LinearLayout>
->>>>>>> master
 </RelativeLayout>

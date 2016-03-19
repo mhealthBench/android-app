@@ -18,6 +18,8 @@ import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import be.mhealth.quantifiedhealth.listener.OnSwipeTouchListener;
+
 public class MainActivity extends AppCompatActivity {
 
     AvatarManager mAvatarManager;
@@ -50,11 +52,32 @@ public class MainActivity extends AppCompatActivity {
         imgView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                AvatarManager.getInstance().updateScore((float)Math.random());
+                AvatarManager.getInstance().updateScore((float) Math.random());
                 Snackbar.make(view, "Go to benchmark details", Snackbar.LENGTH_LONG).setAction("Action", null).show();
             }
         });
+
+
+        registerSwipeListener(imgView);
+        registerSwipeListener(myScoreView);
+        registerSwipeListener(populationScoreView);
+        registerSwipeListener(findViewById(R.id.score0));
+        registerSwipeListener(findViewById(R.id.score2));
+        registerSwipeListener(findViewById(R.id.title0));
+        registerSwipeListener(findViewById(R.id.title1));
     }
+
+    private void registerSwipeListener(final View view) {
+        view.setOnTouchListener(new OnSwipeTouchListener(MainActivity.this) {
+            @Override
+            public void onSwipeLeft() {
+                final Intent intent = new Intent(MainActivity.this, ProfileSettingsActivity.class);
+                startActivity(intent);
+            }
+        });
+    }
+
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -83,9 +106,10 @@ public class MainActivity extends AppCompatActivity {
     public void showProfileSettings(final View view){
         final Intent intent = new Intent(this, ProfileSettingsActivity.class);
         startActivity(intent);
-
-
     }
+
+
+
 
 
 }
