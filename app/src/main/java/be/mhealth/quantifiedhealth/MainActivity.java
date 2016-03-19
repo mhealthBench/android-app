@@ -13,22 +13,45 @@ import android.util.Log;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.Window;
+import android.view.WindowManager;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
+    AvatarManager mAvatarManager;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+
         super.onCreate(savedInstanceState);
+
+
         setContentView(R.layout.activity_main);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+        //Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        //setSupportActionBar(toolbar);
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                Snackbar.make(view, "Go to logging", Snackbar.LENGTH_LONG).setAction("Action", null).show();
+            }
+        });
+
+        final ImageView imgView = (ImageView)findViewById(R.id.avatar);
+        final TextView myScoreView = (TextView)findViewById(R.id.score1);
+        final TextView populationScoreView = (TextView)findViewById(R.id.score3);
+        AvatarManager.getInstance().initialize(this, imgView, myScoreView, populationScoreView, (float)Math.random(), 0.65f);
+
+        imgView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                AvatarManager.getInstance().updateScore((float)Math.random());
+                Snackbar.make(view, "Go to benchmark details", Snackbar.LENGTH_LONG).setAction("Action", null).show();
             }
         });
     }
