@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#3F51B5</color>
-    <color name="colorPrimaryDark">#303F9F</color>
-    <color name="colorAccent">#FF4081</color>
+    <color name="colorPrimary">#98c77b</color>
+    <color name="colorPrimaryDark">#70945a</color>
+    <color name="colorAccent">#40a9ff</color>
+    <color name="colorTitle">@android:color/white</color>
     <color name="selector">@android:color/white</color>
     <color name="colorTabIndicator">#ffffff</color>
-    <color name="colorBackground">#98c77b</color>
+    <color name="colorBackground">#7c98c77b</color>
+    <color name="colorTabControl">#98c77b</color>
 </resources>

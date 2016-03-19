@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Quantified Health</string>
     <string name="action_settings">Settings</string>
-    <string name="title_activity_benchmark">BenchmarkActivity</string>
+    <string name="title_activity_benchmark">Health Benchmark</string>
     <string name="healthdata">Health Data</string>
     <string name="activity">Activity</string>
     <string name="nutrition">Nutrition</string>
