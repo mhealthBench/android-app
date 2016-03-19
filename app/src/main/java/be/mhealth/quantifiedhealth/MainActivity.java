@@ -53,35 +53,23 @@ public class MainActivity extends AppCompatActivity {
         });
         */
         
-        registerLeftSwipeListener(imgView);
-        registerLeftSwipeListener(myScoreView);
-        registerLeftSwipeListener(populationScoreView);
-        registerLeftSwipeListener(findViewById(R.id.score0));
-        registerLeftSwipeListener(findViewById(R.id.score2));
-        registerLeftSwipeListener(findViewById(R.id.title0));
-        registerLeftSwipeListener(findViewById(R.id.title1));
-        
-        registerRightSwipeListener(imgView);
-        registerRightSwipeListener(myScoreView);
-        registerRightSwipeListener(populationScoreView);
-        registerRightSwipeListener(findViewById(R.id.score0));
-        registerRightSwipeListener(findViewById(R.id.score2));
-        registerRightSwipeListener(findViewById(R.id.title0));
-        registerRightSwipeListener(findViewById(R.id.title1));
+        registerSwipeListener(imgView);
+        registerSwipeListener(myScoreView);
+        registerSwipeListener(populationScoreView);
+        registerSwipeListener(findViewById(R.id.score0));
+        registerSwipeListener(findViewById(R.id.score2));
+        registerSwipeListener(findViewById(R.id.title0));
+        registerSwipeListener(findViewById(R.id.title1));
     }
 
-    private void registerLeftSwipeListener(final View view) {
+    private void registerSwipeListener(final View view) {
         view.setOnTouchListener(new OnSwipeTouchListener(MainActivity.this) {
             @Override
             public void onSwipeLeft() {
                 final Intent intent = new Intent(MainActivity.this, ProfileSettingsActivity.class);
                 startActivity(intent);
             }
-        });
-    }
 
-    private void registerRightSwipeListener(final View view) {
-        view.setOnTouchListener(new OnSwipeTouchListener(MainActivity.this) {
             @Override
             public void onSwipeRight() {
                 final Intent intent = new Intent(MainActivity.this, BenchmarkActivity.class);
@@ -89,6 +77,8 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+
+
 
 
     @Override
