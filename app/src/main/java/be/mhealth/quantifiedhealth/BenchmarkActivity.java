@@ -38,7 +38,7 @@ public class BenchmarkActivity extends AppCompatActivity {
 
         CharSequence Titles[]={getString(R.string.healthdata), getString(R.string.activity), getString(R.string.nutrition), getString(R.string.mental)};
 
-        adapter =  new ViewPagerAdapter(getSupportFragmentManager(),Titles,Numboftabs);
+        adapter =  new ViewPagerAdapter(getSupportFragmentManager(),Titles,Numboftabs,this.getApplicationContext());
 
         // Assigning ViewPager View and setting the adapter
         pager = (ViewPager) findViewById(R.id.pager);
@@ -46,6 +46,7 @@ public class BenchmarkActivity extends AppCompatActivity {
 
         // Assiging the Sliding Tab Layout View
         tabs = (SlidingTabLayout) findViewById(R.id.tabs);
+        tabs.setCustomTabView(R.layout.custom_tab, 0);
         tabs.setDistributeEvenly(true); // To make the Tabs Fixed set this true, This makes the tabs Space Evenly in Available width
 
         // Setting Custom Color for the Scroll bar indicator of the Tab View
