@@ -2,19 +2,13 @@ package be.mhealth.quantifiedhealth;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.preference.Preference;
-import android.preference.PreferenceManager;
-import android.preference.PreferenceScreen;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
-import android.util.Log;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.Window;
-import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -27,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         requestWindowFeature(Window.FEATURE_NO_TITLE);
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        //getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         super.onCreate(savedInstanceState);
 
@@ -47,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
         final ImageView imgView = (ImageView)findViewById(R.id.avatar);
         final TextView myScoreView = (TextView)findViewById(R.id.score1);
         final TextView populationScoreView = (TextView)findViewById(R.id.score3);
-        AvatarManager.getInstance().initialize(this, imgView, myScoreView, populationScoreView, (float)Math.random(), 0.65f);
+        AvatarManager.getInstance().initialize(this, imgView, myScoreView, populationScoreView, (float) Math.random(), 0.65f);
 
         /*
         imgView.setOnClickListener(new View.OnClickListener() {
@@ -59,16 +53,24 @@ public class MainActivity extends AppCompatActivity {
         });
         */
         
-        registerSwipeListener(imgView);
-        registerSwipeListener(myScoreView);
-        registerSwipeListener(populationScoreView);
-        registerSwipeListener(findViewById(R.id.score0));
-        registerSwipeListener(findViewById(R.id.score2));
-        registerSwipeListener(findViewById(R.id.title0));
-        registerSwipeListener(findViewById(R.id.title1));
+        registerLeftSwipeListener(imgView);
+        registerLeftSwipeListener(myScoreView);
+        registerLeftSwipeListener(populationScoreView);
+        registerLeftSwipeListener(findViewById(R.id.score0));
+        registerLeftSwipeListener(findViewById(R.id.score2));
+        registerLeftSwipeListener(findViewById(R.id.title0));
+        registerLeftSwipeListener(findViewById(R.id.title1));
+        
+        registerRightSwipeListener(imgView);
+        registerRightSwipeListener(myScoreView);
+        registerRightSwipeListener(populationScoreView);
+        registerRightSwipeListener(findViewById(R.id.score0));
+        registerRightSwipeListener(findViewById(R.id.score2));
+        registerRightSwipeListener(findViewById(R.id.title0));
+        registerRightSwipeListener(findViewById(R.id.title1));
     }
 
-    private void registerSwipeListener(final View view) {
+    private void registerLeftSwipeListener(final View view) {
         view.setOnTouchListener(new OnSwipeTouchListener(MainActivity.this) {
             @Override
             public void onSwipeLeft() {
@@ -78,6 +80,15 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+    private void registerRightSwipeListener(final View view) {
+        view.setOnTouchListener(new OnSwipeTouchListener(MainActivity.this) {
+            @Override
+            public void onSwipeRight() {
+                final Intent intent = new Intent(MainActivity.this, BenchmarkActivity.class);
+                startActivity(intent);
+            }
+        });
+    }
 
 
     @Override
