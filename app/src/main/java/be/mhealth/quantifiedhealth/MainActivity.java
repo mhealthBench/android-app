@@ -49,6 +49,7 @@ public class MainActivity extends AppCompatActivity {
         final TextView populationScoreView = (TextView)findViewById(R.id.score3);
         AvatarManager.getInstance().initialize(this, imgView, myScoreView, populationScoreView, (float)Math.random(), 0.65f);
 
+        /*
         imgView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -56,8 +57,8 @@ public class MainActivity extends AppCompatActivity {
                 Snackbar.make(view, "Go to benchmark details", Snackbar.LENGTH_LONG).setAction("Action", null).show();
             }
         });
-
-
+        */
+        
         registerSwipeListener(imgView);
         registerSwipeListener(myScoreView);
         registerSwipeListener(populationScoreView);
