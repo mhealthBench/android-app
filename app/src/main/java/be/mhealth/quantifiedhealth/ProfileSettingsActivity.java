@@ -20,6 +20,7 @@ import android.preference.PreferenceFragment;
 import android.preference.PreferenceManager;
 import android.preference.RingtonePreference;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.MenuItem;
 
 import java.util.List;
@@ -260,5 +261,12 @@ public class ProfileSettingsActivity extends AppCompatPreferenceActivity {
             }
             return super.onOptionsItemSelected(item);
         }
+    }
+
+    @Override
+    public void onBackPressed() {
+        Log.d("test", "onBakPRessed");
+        final Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
     }
 }

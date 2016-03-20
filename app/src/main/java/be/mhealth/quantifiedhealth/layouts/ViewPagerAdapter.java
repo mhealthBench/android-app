@@ -5,6 +5,7 @@ package be.mhealth.quantifiedhealth.layouts;
  */
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -15,8 +16,10 @@ import android.text.style.DynamicDrawableSpan;
 import android.text.style.ImageSpan;
 
 import be.mhealth.quantifiedhealth.AdviceActivity;
+import be.mhealth.quantifiedhealth.AppCompatPreferenceActivity;
 import be.mhealth.quantifiedhealth.DiaryActivity;
 import be.mhealth.quantifiedhealth.HomeActivity;
+import be.mhealth.quantifiedhealth.ProfileSettingsActivity;
 import be.mhealth.quantifiedhealth.R;
 
 /**
@@ -37,7 +40,6 @@ public class ViewPagerAdapter extends FragmentStatePagerAdapter {
         this.Titles = mTitles;
         this.NumbOfTabs = mNumbOfTabsumb;
         this.context = context;
-
     }
 
     //This method return the fragment for the every position in the View Pager
@@ -48,8 +50,7 @@ public class ViewPagerAdapter extends FragmentStatePagerAdapter {
             return new HomeActivity();
         }
         else  if(position == 1)  {
-            HealthDataTab healthDataTab = new HealthDataTab();
-            return healthDataTab;
+            return new HealthDataTab();
         }
         else  if(position == 2)  {
             return new DiaryActivity();

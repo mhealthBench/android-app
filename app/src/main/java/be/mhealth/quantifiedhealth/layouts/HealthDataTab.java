@@ -4,14 +4,17 @@ package be.mhealth.quantifiedhealth.layouts;
  * Created by Stijn on 19/03/16.
  */
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.Menu;
 import android.view.View;
 import android.view.ViewGroup;
 
+import be.mhealth.quantifiedhealth.ProfileSettingsActivity;
 import be.mhealth.quantifiedhealth.R;
 
 /**
@@ -26,12 +29,8 @@ public class HealthDataTab extends Fragment {
         super.onCreate(savedInstanceState);
         view = inflater.inflate(R.layout.health_data_tab, container, false);
 
-        return view;
-    }
 
-    @Override
-    public void onResume() {
-        Log.e("DEBUG", "onResume of HealthDataFragment");
-        super.onResume();
+
+        return view;
     }
 }
