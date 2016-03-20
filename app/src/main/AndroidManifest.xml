@@ -28,7 +28,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".AdviceEntryActivity" />
-        <activity android:name=".AdviceActivity2"></activity>
+        <activity android:name=".AdviceActivity"></activity>
     </application>
 
 </manifest>

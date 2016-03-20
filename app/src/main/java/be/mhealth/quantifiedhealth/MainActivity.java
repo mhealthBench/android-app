@@ -10,7 +10,6 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.Window;
 import android.widget.ImageView;
-import android.widget.TextView;
 
 import be.mhealth.quantifiedhealth.listener.OnSwipeTouchListener;
 
@@ -55,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onSwipeRight() {
-                final Intent intent = new Intent(MainActivity.this, AdviceActivity2.class);
+                final Intent intent = new Intent(MainActivity.this, AdviceActivity.class);
                 startActivity(intent);
             }
         });

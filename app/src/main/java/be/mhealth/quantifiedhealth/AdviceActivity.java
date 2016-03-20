@@ -10,7 +10,7 @@ import android.widget.ListView;
 
 import java.util.ArrayList;
 
-public class AdviceActivity2 extends AppCompatActivity {
+public class AdviceActivity extends AppCompatActivity {
 
     ArrayList<String> listItems = new ArrayList<String>();
 
@@ -19,7 +19,7 @@ public class AdviceActivity2 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_advice2);
+        setContentView(R.layout.activity_advice);
 
         setTitle(R.string.title_activity_advice);
 
@@ -46,7 +46,7 @@ public class AdviceActivity2 extends AppCompatActivity {
             @Override
             public void onItemClick(final AdapterView<?> adapterView, final View view,
                                     final int position, final long id) {
-                final Intent intent = new Intent(AdviceActivity2.this, AdviceEntryActivity.class);
+                final Intent intent = new Intent(AdviceActivity.this, AdviceEntryActivity.class);
                 intent.putExtra(AdviceEntryActivity.ENTRY_POSITION, position);
                 startActivity(intent);
             }
