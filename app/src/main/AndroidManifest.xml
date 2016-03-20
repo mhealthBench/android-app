@@ -55,7 +55,6 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:name=".AdviceEntryActivity" />
         <activity android:name=".AdviceActivity" />
         <activity android:name=".DiaryActivity"></activity>
     </application>
