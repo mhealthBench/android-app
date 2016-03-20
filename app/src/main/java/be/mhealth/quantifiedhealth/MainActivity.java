@@ -55,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onSwipeRight() {
-                final Intent intent = new Intent(MainActivity.this, AdviceActivity.class);
+                final Intent intent = new Intent(MainActivity.this, AdviceActivity2.class);
                 startActivity(intent);
             }
         });
