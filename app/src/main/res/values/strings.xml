@@ -23,7 +23,7 @@
     </string>
 
     <string name="pref_title_display_name">Name</string>
-    <string name="pref_default_display_name">John Smith</string>
+    <string name="pref_default_display_name">Olivia Smith</string>
 
     <string name="pref_title_height">Height</string>
     <integer name="pref_default_height">180</integer>
