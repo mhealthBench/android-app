@@ -36,10 +36,18 @@ public class AdviceActivity extends AppCompatActivity {
                 android.R.layout.simple_list_item_1,
                 listItems);
 
+        final String[] entries = getResources().getStringArray(R.array.advice_entry_highlights);
+
+        adapter=new RowAdapter(this,
+                android.R.layout.simple_list_item_1,
+                entries);
+
+
+
         lw.setAdapter(adapter);
 
-        final String[] entries = getResources().getStringArray(R.array.advice_entry_highlights);
-        adapter.addAll(entries);
+       // final String[] entries = getResources().getStringArray(R.array.advice_entry_highlights);
+       // adapter.addAll(entries);
 
 
         lw.setOnItemClickListener(new AdapterView.OnItemClickListener() {
