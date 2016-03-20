@@ -15,7 +15,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:contentDescription=""
-        android:src="@drawable/bg_content_advice_smaller_img"
+        android:src="@drawable/bg_content_diary"
         android:layout_marginLeft="0dp"
         android:layout_marginTop="0dp"
         android:layout_marginRight="0dp"

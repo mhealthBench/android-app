@@ -82,6 +82,7 @@
 
     <string name="pref_title_senses_bluetooth_settings">Senses Bluetooth Settings</string>
     <string name="title_activity_advice">Advice Dashboard</string>
+    <string name="title_activity_diary">Diary</string>
     <string name="large_text">
         "Material is the metaphor.\n\n"
 
