@@ -30,14 +30,13 @@ public class QuestionnaireHotFlashesActivity extends AppCompatActivity {
 
         button = (Button) findViewById(R.id.flash_button);
 
+        button.setText(R.string.btn_questionaire_done);
         button.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View arg0) {
-
-                Intent intent = new Intent(context, QuestionnaireHeadachesActivity.class);
-                startActivity(intent);
-
+            final Intent intent = new Intent(context, MainActivity.class);
+            startActivity(intent);
             }
 
         });

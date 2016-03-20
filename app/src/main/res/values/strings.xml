@@ -203,5 +203,7 @@
         </item>
     </string-array>
 
+    <string name="btn_questionaire_done">"Done"</string>
+
 
 </resources>

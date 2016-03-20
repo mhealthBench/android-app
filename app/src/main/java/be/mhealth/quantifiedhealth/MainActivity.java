@@ -33,7 +33,10 @@ public class MainActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Go to logging", Snackbar.LENGTH_LONG).setAction("Action", null).show();
+        //Snackbar.make(view, "Go to logging", Snackbar.LENGTH_LONG).setAction("Action", null).show();
+                final Intent intent = new Intent(MainActivity.this, QuestionnaireHeadachesActivity.class);
+                startActivity(intent);
+
             }
         });
 
