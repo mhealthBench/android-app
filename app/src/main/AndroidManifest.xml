@@ -40,15 +40,15 @@
         <activity
             android:name=".QuestionnaireInsomniaActivity"
             android:label="@string/title_activity_questionnaire"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".QuestionnaireHeadachesActivity"
             android:label="@string/title_activity_questionnaire"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".QuestionnaireUrinaryIncontinenceActivity"
             android:label="@string/title_activity_questionnaire"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".ProfileSettingsActivity">
             <intent-filter>
@@ -56,7 +56,11 @@
             </intent-filter>
         </activity>
         <activity android:name=".AdviceActivity" />
-        <activity android:name=".DiaryActivity"></activity>
+        <activity android:name=".DiaryActivity" />
+        <activity
+            android:name=".HomeActivity"
+            android:label="@string/title_activity_home"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>

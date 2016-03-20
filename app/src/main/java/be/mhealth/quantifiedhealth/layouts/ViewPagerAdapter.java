@@ -14,6 +14,7 @@ import android.text.Spanned;
 import android.text.style.DynamicDrawableSpan;
 import android.text.style.ImageSpan;
 
+import be.mhealth.quantifiedhealth.HomeActivity;
 import be.mhealth.quantifiedhealth.R;
 
 /**
@@ -43,7 +44,8 @@ public class ViewPagerAdapter extends FragmentStatePagerAdapter {
 
         if(position == 0) {
             HealthDataTab healthDataTab = new HealthDataTab();
-            return healthDataTab;
+
+            return new HomeActivity();
         }
         else  if(position == 1)  {
             HealthDataTab healthDataTab = new HealthDataTab();
