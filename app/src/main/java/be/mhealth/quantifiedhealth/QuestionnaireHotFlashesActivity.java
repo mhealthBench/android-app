@@ -20,7 +20,7 @@ public class QuestionnaireHotFlashesActivity extends AppCompatActivity {
 
         toolbar = (Toolbar) findViewById(R.id.tool_bar);
         setSupportActionBar(toolbar);
-
+        StyleHelper.setupWindowColor(this);
         addListenerOnButton();
     }
 

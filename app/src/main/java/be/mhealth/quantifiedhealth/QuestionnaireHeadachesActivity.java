@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.Button;
 
 public class QuestionnaireHeadachesActivity extends AppCompatActivity {
@@ -20,7 +22,7 @@ public class QuestionnaireHeadachesActivity extends AppCompatActivity {
 
         toolbar = (Toolbar) findViewById(R.id.tool_bar);
         setSupportActionBar(toolbar);
-
+        StyleHelper.setupWindowColor(this);
         addListenerOnButton();
     }
 
