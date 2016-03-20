@@ -6,22 +6,20 @@
     android:paddingRight="0dp"
     android:paddingTop="0dp"
     android:paddingBottom="0dp"
-    android:background="#FFEB3B"
+    android:background="#FFFFFF"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:showIn="@layout/activity_diary" tools:context=".DiaryActivity"
-    android:minWidth="1000dp">
+    tools:showIn="@layout/activity_diary" tools:context=".DiaryActivity">
 
     <ImageView
         android:id="@+id/imgViewDiary"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="fill_parent"
         android:contentDescription=""
         android:src="@drawable/bg_content_diary"
         android:layout_marginLeft="0dp"
         android:layout_marginTop="0dp"
         android:layout_marginRight="0dp"
         android:layout_marginBottom="0dp"
-        android:scaleType="centerCrop"
         android:adjustViewBounds="true"/>
 </RelativeLayout>
 

@@ -22,7 +22,6 @@ public class DiaryActivity extends AppCompatActivity {
                 final Intent intent = new Intent(DiaryActivity.this, AdviceActivity.class);
                 startActivity(intent);
             }
-
         });
     }
 }
