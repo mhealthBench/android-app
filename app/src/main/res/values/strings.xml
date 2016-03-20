@@ -7,6 +7,7 @@
     <string name="nutrition">Nutrition</string>
     <string name="mental">Mental</string>
     <string name="title_activity_profile_settings">Profile Settings</string>
+    <string name="title_activity_questionnaire">Current Symptoms</string>
 
     <!-- Strings related to Settings -->
 
@@ -48,7 +49,6 @@
         <item>any random</item>
         <item>content</item>
     </string-array>
-
 
 
     <!-- Example settings for Data & Sync -->

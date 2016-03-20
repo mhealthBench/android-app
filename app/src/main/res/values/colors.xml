@@ -4,6 +4,7 @@
     <color name="colorPrimaryDark">#70945a</color>
     <color name="colorAccent">#40a9ff</color>
     <color name="colorTitle">@android:color/white</color>
+    <color name="colorText">@android:color/black</color>
     <color name="selector">@android:color/white</color>
     <color name="colorTabIndicator">#ffffff</color>
     <color name="colorBackground">#7c98c77b</color>
