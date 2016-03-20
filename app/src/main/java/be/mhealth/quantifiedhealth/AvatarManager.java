@@ -17,51 +17,32 @@ public class AvatarManager
     private static AvatarManager instance = null;
     private Bitmap[] bitmaps;
     private ImageView avatarView;
-    private TextView myScoreView;
-    private TextView populationScoreView;
-    private float myScore;
-    private float populationScore;
+    private int bitmapIdx;
 
     private AvatarManager()
-    {}
+    {
+        bitmapIdx = 0;
+    }
 
     public static AvatarManager getInstance()
     {
         if(instance == null)
             instance = new AvatarManager();
+        else
+            instance.bitmapIdx = 1;
         return instance;
     }
 
     public void initialize(
         Context aCtx,
-        ImageView aAvatarView,
-        TextView aMyScoreView,
-        TextView aPopulationScoreView,
-        float aMyInitialScore,
-        float aPopulationInitialScore)
+        ImageView aAvatarView)
     {
         avatarView = aAvatarView;
-        myScoreView = aMyScoreView;
-        populationScoreView = aPopulationScoreView;
 
-        bitmaps = new Bitmap[FILE_NAMES.length];
-        for (int i = 0; i < FILE_NAMES.length; ++i)
+        bitmaps = new Bitmap[NUM_BITMAPS];
+        for (int i = 0; i < NUM_BITMAPS; ++i)
             bitmaps[i] = BitmapFactory.decodeResource(aCtx.getResources(), aCtx.getResources().getIdentifier("drawable/" + FILE_NAMES[i], null, aCtx.getPackageName()));
 
-        updateScore(aMyInitialScore, aPopulationInitialScore);
-    }
-
-    public void updateScore(final float aMyScore)
-    {
-        myScore = aMyScore;
-        avatarView.setImageBitmap(bitmaps[Math.min(NUM_BITMAPS - 1, (int) Math.floor(aMyScore * NUM_BITMAPS))]);
-        myScoreView.setText((int)Math.floor(myScore * 100.0f) + "%");
-    }
-
-    public void updateScore(final float aMyScore, final float aPopulationScore)
-    {
-        updateScore(aMyScore);
-        populationScore = aPopulationScore;
-        populationScoreView.setText((int)Math.floor(populationScore * 100.0f) + "%");
+        avatarView.setImageBitmap(bitmaps[bitmapIdx]);
     }
 }

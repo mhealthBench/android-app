@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -15,15 +16,12 @@ import be.mhealth.quantifiedhealth.listener.OnSwipeTouchListener;
 
 public class MainActivity extends AppCompatActivity {
 
-    AvatarManager mAvatarManager;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         //getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         super.onCreate(savedInstanceState);
-
 
         setContentView(R.layout.activity_main);
         //Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
@@ -33,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-        //Snackbar.make(view, "Go to logging", Snackbar.LENGTH_LONG).setAction("Action", null).show();
+                //Snackbar.make(view, "Go to logging", Snackbar.LENGTH_LONG).setAction("Action", null).show();
                 final Intent intent = new Intent(MainActivity.this, QuestionnaireHeadachesActivity.class);
                 startActivity(intent);
 
@@ -41,7 +39,9 @@ public class MainActivity extends AppCompatActivity {
         });
 
         final ImageView imgView = (ImageView)findViewById(R.id.avatar);
-        
+
+        AvatarManager.getInstance().initialize(this, imgView);
+
         registerSwipeListener(imgView);
         registerSwipeListener(findViewById(R.id.title0));
         registerSwipeListener(findViewById(R.id.title1));
