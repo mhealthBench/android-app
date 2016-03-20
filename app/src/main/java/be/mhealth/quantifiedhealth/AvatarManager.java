@@ -9,8 +9,8 @@ import android.widget.TextView;
 public class AvatarManager
 {
     private final static String[] FILE_NAMES = {
-        "sunflowers_state1",
-        "sunflowers_state2",
+        "sunflowers_state1_b",
+        "sunflowers_state2_b",
     };
     private final static int NUM_BITMAPS = FILE_NAMES.length;
 
