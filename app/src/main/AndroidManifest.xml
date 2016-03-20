@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="be.mhealth.quantifiedhealth" >
+    package="be.mhealth.quantifiedhealth">
 
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme" >
+        android:theme="@style/AppTheme">
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name"
@@ -21,17 +21,17 @@
         <activity
             android:name=".BenchmarkActivity"
             android:label="@string/title_activity_benchmark"
-            android:theme="@style/AppTheme.NoActionBar">
-            
-        </activity>
-
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".ProfileSettingsActivity">
-        <intent-filter>
-            <category android:name="android.intent.category.DEFAULT" />
-        </intent-filter>
-    </activity>
-
-
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".AdviceActivity"
+            android:label="@string/title_activity_advice"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".AdviceEntryActivity"></activity>
     </application>
 
 </manifest>

@@ -72,7 +72,7 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onSwipeRight() {
-                final Intent intent = new Intent(MainActivity.this, BenchmarkActivity.class);
+                final Intent intent = new Intent(MainActivity.this, AdviceActivity.class);
                 startActivity(intent);
             }
         });
