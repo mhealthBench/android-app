@@ -23,7 +23,7 @@ public class AdviceActivity extends AppCompatActivity {
 
         setTitle(R.string.title_activity_advice);
 
-        final ListView lw = (ListView) findViewById(R.id.listAdvice2);
+        /*final ListView lw = (ListView) findViewById(R.id.listAdvice2);
         adapter=new ArrayAdapter<String>(this,
                 android.R.layout.simple_list_item_1,
                 listItems);
@@ -50,6 +50,6 @@ public class AdviceActivity extends AppCompatActivity {
                 intent.putExtra(AdviceEntryActivity.ENTRY_POSITION, position);
                 startActivity(intent);
             }
-        });
+        });*/
     }
 }
