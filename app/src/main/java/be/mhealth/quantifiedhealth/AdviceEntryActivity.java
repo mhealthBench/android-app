@@ -14,16 +14,13 @@ public class AdviceEntryActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_advice_entry);
-        //setTitle(R.string.title_activity_advice);
-
 
         final Intent intent = getIntent();
         final String[] entryTitles = getResources().getStringArray(R.array.advice_entry_highlights);
 
         final int entryPosition = intent.getIntExtra(ENTRY_POSITION, 0);
-
-        setTitle(getResources().getString(R.string.title_activity_advice) +
-        " - " + entryTitles[entryPosition]);
+        final String fixedTitle = getResources().getString(R.string.title_activity_advice);
+        setTitle(fixedTitle + " - " + entryTitles[entryPosition]);
 
         final String[] entries = getResources().getStringArray(R.array.advice_entries);
         final TextView txtView = (TextView)findViewById(R.id.textView);

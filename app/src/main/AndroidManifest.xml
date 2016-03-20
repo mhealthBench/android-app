@@ -27,10 +27,6 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".AdviceActivity"
-            android:label="@string/title_activity_advice"
-            android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".AdviceEntryActivity" />
         <activity android:name=".AdviceActivity2"></activity>
     </application>
