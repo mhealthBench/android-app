@@ -8,17 +8,12 @@ import android.widget.TextView;
 
 public class AvatarManager
 {
-    private final static int NUM_BITMAPS = 8;
     private final static String[] FILE_NAMES = {
-        "panda_01_crying",
-        "panda_12_scared",
-        "panda_02_really_sad",
-        "panda_03_sad",
-        "panda_04_apatic",
-        "panda_05_mostly_happy",
-        "panda_06_really_haappy",
-        "panda_16_in_love"
+        "sunflowers_state1",
+        "sunflowers_state2",
     };
+    private final static int NUM_BITMAPS = FILE_NAMES.length;
+
     private static AvatarManager instance = null;
     private Bitmap[] bitmaps;
     private ImageView avatarView;
