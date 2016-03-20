@@ -14,6 +14,8 @@ import android.text.Spanned;
 import android.text.style.DynamicDrawableSpan;
 import android.text.style.ImageSpan;
 
+import be.mhealth.quantifiedhealth.AdviceActivity;
+import be.mhealth.quantifiedhealth.DiaryActivity;
 import be.mhealth.quantifiedhealth.HomeActivity;
 import be.mhealth.quantifiedhealth.R;
 
@@ -43,16 +45,17 @@ public class ViewPagerAdapter extends FragmentStatePagerAdapter {
     public Fragment getItem(int position) {
 
         if(position == 0) {
-            HealthDataTab healthDataTab = new HealthDataTab();
-
             return new HomeActivity();
         }
         else  if(position == 1)  {
             HealthDataTab healthDataTab = new HealthDataTab();
             return healthDataTab;
-        } else  {
-            HealthDataTab healthDataTab = new HealthDataTab();
-            return healthDataTab;
+        }
+        else  if(position == 2)  {
+            return new DiaryActivity();
+        }
+        else  {
+            return new AdviceActivity();
         }
 
 
@@ -64,19 +67,19 @@ public class ViewPagerAdapter extends FragmentStatePagerAdapter {
     public CharSequence getPageTitle(int position) {
         switch (position) {
             case 0:
-                myDrawable = context.getResources().getDrawable(R.drawable.ic_health_data);
+                myDrawable = context.getResources().getDrawable(R.drawable.home);
                 title = Titles[position].toString();
                 break;
             case 1:
-                myDrawable = context.getResources().getDrawable(R.drawable.ic_walking);
+                myDrawable = context.getResources().getDrawable(R.drawable.patient_data_page);
                 title = Titles[position].toString();
                 break;
             case 2:
-                myDrawable = context.getResources().getDrawable(R.drawable.ic_food);
+                myDrawable = context.getResources().getDrawable(R.drawable.agenda);
                 title = Titles[position].toString();
                 break;
             case 3:
-                myDrawable = context.getResources().getDrawable(R.drawable.ic_mental);
+                myDrawable = context.getResources().getDrawable(R.drawable.chat);
                 title = Titles[position].toString();
                 break;
             default:
