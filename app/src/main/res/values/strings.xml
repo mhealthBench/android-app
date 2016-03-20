@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Fiora</string>
+    <string name="app_name">Fiore</string>
     <string name="action_settings">Settings</string>
     <string name="title_activity_benchmark">Health Benchmark</string>
     <string name="healthdata">Health Data</string>
