@@ -48,7 +48,7 @@
             android:id="@+id/title0"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Fiore"
+            android:text="FIORE"
             android:gravity="center"
             android:textSize="44sp"/>
 
@@ -56,51 +56,10 @@
             android:id="@+id/title1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Your healthy life coach"
+            android:text="Life starts at menopause"
             android:gravity="center"
             android:textSize="18sp"/>
 
-        <TextView
-            android:id="@+id/textView2"
-            android:layout_width="178dp"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:textSize="18sp"
-            android:layout_gravity="center_horizontal"
-            android:layout_weight="0.91" />
-
-        <TextView
-            android:id="@+id/score0"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="You"
-            android:gravity="center"
-            android:textSize="18sp"/>
-
-        <TextView
-            android:id="@+id/score1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text=""
-            android:gravity="center"
-            android:textStyle="bold"
-            android:textSize="32sp"/>
-
-        <TextView
-            android:id="@+id/score2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Population"
-            android:gravity="center"
-            android:textSize="18sp"/>
-
-        <TextView
-            android:id="@+id/score3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text=""
-            android:gravity="center"
-            android:textSize="18sp"/>
     </LinearLayout>
 
 </RelativeLayout>

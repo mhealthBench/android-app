@@ -39,25 +39,8 @@ public class MainActivity extends AppCompatActivity {
         });
 
         final ImageView imgView = (ImageView)findViewById(R.id.avatar);
-        final TextView myScoreView = (TextView)findViewById(R.id.score1);
-        final TextView populationScoreView = (TextView)findViewById(R.id.score3);
-        AvatarManager.getInstance().initialize(this, imgView, myScoreView, populationScoreView, (float) Math.random(), 0.65f);
-
-        /*
-        imgView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                AvatarManager.getInstance().updateScore((float) Math.random());
-                Snackbar.make(view, "Go to benchmark details", Snackbar.LENGTH_LONG).setAction("Action", null).show();
-            }
-        });
-        */
         
         registerSwipeListener(imgView);
-        registerSwipeListener(myScoreView);
-        registerSwipeListener(populationScoreView);
-        registerSwipeListener(findViewById(R.id.score0));
-        registerSwipeListener(findViewById(R.id.score2));
         registerSwipeListener(findViewById(R.id.title0));
         registerSwipeListener(findViewById(R.id.title1));
     }
